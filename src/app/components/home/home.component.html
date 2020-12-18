@@ -1,0 +1,5 @@
+<app-loading *ngIf="loading"></app-loading>
+
+<app-errormessage *ngIf="error" [errorObj]="errorObj"></app-errormessage>
+
+<app-tarjetas *ngIf="!error" [items]="listaAlbumes" (artistaSeleccionado)="verArtista($event)"></app-tarjetas>
